@@ -1,5 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 // import * as sqs from '@aws-cdk/aws-sqs';
+import { EC2Instance } from "./instance";
 
 export class AwsCourseStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -11,5 +12,7 @@ export class AwsCourseStack extends cdk.Stack {
     // const queue = new sqs.Queue(this, 'AwsCourseQueue', {
     //   visibilityTimeout: cdk.Duration.seconds(300)
     // });
+
+    new EC2Instance(this, 'course');
   }
 }
