@@ -36,8 +36,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ### Servicios
 * EC2
 * SecurityGroup
-* VPC![143146596-67682471-1912-43b4-8b2b-42110f27c53e](https://user-images.githubusercontent.com/7213379/143157144-b2dec4a5-6472-404b-b7f0-a541bcf70c91.png)
-
+* VPC
 * Route53
 * IAM
 * Subnets
