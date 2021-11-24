@@ -30,5 +30,16 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * Automation
 
 ## Seamana 2 [Servicios AWS y Practicas CDK]
+### Servicios
+* EC2
+* SecurityGroup
+* VPC
+* Route53
+* IAM
+* Subnets
+* LoadBalancer [Application Load Balancer | Classic Load Balancer]
+* Target Groups [Application Load Balancer]
+* Amplify [Extra]
+
 
 
