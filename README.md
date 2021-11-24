@@ -39,6 +39,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * Subnets
 * LoadBalancer [Application Load Balancer | Classic Load Balancer]
 * Target Groups [Application Load Balancer]
+* Auto Scaling Group
 * Amplify [Extra]
 
 
