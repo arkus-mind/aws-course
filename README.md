@@ -3,6 +3,12 @@
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
+## Pasos para correr el proyecto
+* Crear una cuenta de AWS
+* Crear un usuario en AWS IAM con permisos programaticos
+* ![image](https://user-images.githubusercontent.com/7213379/143156132-3f547045-62cc-45f5-a9c9-69c20a2748cc.png)
+* `aws configure --profile my-aws` Poner ACCESS KEY y el SECRECT KEY, con su region us-west-1
+
 ## Useful commands
 
  * `npm run build`   compile typescript to js
