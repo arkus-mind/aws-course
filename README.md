@@ -5,18 +5,15 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## Pasos para correr el proyecto
 * Crear una cuenta de AWS
+* `npm i -g aws-cli` Instalar aws-cli
 * Crear un usuario en AWS IAM con permisos programaticos
 * ![image](https://user-images.githubusercontent.com/7213379/143156132-3f547045-62cc-45f5-a9c9-69c20a2748cc.png)
 * `aws configure --profile my-aws` Poner ACCESS KEY y el SECRECT KEY, con su region us-west-1
+* `npm i -g aws-cdk` Instalar aws-cdk
 
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## Comandos para el proyecto
+* `make` Crea el stack del proyecto
+* `cdk destroy` Destruye el stack del proyecto
 
 ## Objetivo Principal
 ![image](https://user-images.githubusercontent.com/7213379/143146596-67682471-1912-43b4-8b2b-42110f27c53e.png)
@@ -39,7 +36,8 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ### Servicios
 * EC2
 * SecurityGroup
-* VPC
+* VPC![143146596-67682471-1912-43b4-8b2b-42110f27c53e](https://user-images.githubusercontent.com/7213379/143157144-b2dec4a5-6472-404b-b7f0-a541bcf70c91.png)
+
 * Route53
 * IAM
 * Subnets
