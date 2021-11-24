@@ -1,4 +1,5 @@
-# AWS Curso Mind CDK!
+# Arquitectura en la nube
+## AWS/CDK
 
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
