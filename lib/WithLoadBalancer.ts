@@ -27,7 +27,7 @@ export class WithLoadBalancer extends core.Construct {
             'sudo apt update',
             'sudo apt install -y apache2',
             'sudo service apache2 start',
-            'sudo echo "<h1>WithLoadBalancer Instance IP -----> $(hostname -f)</h1>" > /var/www/html/index.html',
+            'sudo echo "<h1>(WithLoadBalancer) Instance IP -----> $(hostname -f)</h1>" > /var/www/html/index.html',
         );
 
         const ubuntuMachineImage = ec2.MachineImage.genericLinux({
