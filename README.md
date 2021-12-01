@@ -13,7 +13,8 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `npm i -g aws-cdk` Instalar aws-cdk
 
 ## Comandos para el proyecto
-* `make` Crea el stack del proyecto
+* `make single-instance` Crea el stack del proyecto SingleInstance
+* `make with-loadbalancer` Crea el stack del proyecto WithLoadBalancer
 * `cdk destroy` Destruye el stack del proyecto
 
 ## Objetivo Principal
