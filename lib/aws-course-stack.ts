@@ -1,6 +1,7 @@
 import * as cdk from '@aws-cdk/core';
 import { SingleInstance } from "./SingleInstance";
 import { WithLoadBalancer } from "./WithLoadBalancer";
+import { RDSPostgresql } from "./RDSPostgresql";
 
 class AwsCourseSingleInstanceStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -18,6 +19,14 @@ class AwsCourseWithLoadBalancerStack extends cdk.Stack {
   }
 }
 
+class AwsCourseRDSPostgresqlStack extends cdk.Stack {
+  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+
+    new RDSPostgresql(this, 'RDSPostgresql');
+  }
+}
+
 let InfrastructureStack: any;
 const InfrastructureType = process.env.PRACTICE;
 switch (InfrastructureType) {
@@ -26,6 +35,9 @@ switch (InfrastructureType) {
     break;
   case 'WithLoadBalancer':
     InfrastructureStack = AwsCourseWithLoadBalancerStack
+    break;
+  case 'RDSPostgresql':
+    InfrastructureStack = AwsCourseRDSPostgresqlStack
     break;
 }
 

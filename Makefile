@@ -4,3 +4,6 @@ single-instance:
 with-loadbalancer:
 	export PRACTICE="WithLoadBalancer" && cdk deploy --profile my-aws
 
+rds-postgresql:
+	export PRACTICE="RDSPostgresql" && cdk deploy --profile my-aws
+
