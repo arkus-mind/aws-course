@@ -6,7 +6,7 @@ import * as route53 from '@aws-cdk/aws-route53';
 import * as route53targets from '@aws-cdk/aws-route53-targets';
 
 // Levanta instancias con autoescalado y loadbalancer
-export class Practica2 extends core.Construct {
+export class WithLoadBalancer extends core.Construct {
     constructor(scope: core.Stack, id: string) {
         super(scope, id);
 
@@ -27,7 +27,7 @@ export class Practica2 extends core.Construct {
             'sudo apt update',
             'sudo apt install -y apache2',
             'sudo service apache2 start',
-            'sudo echo "<h1>Instancia IP -----> $(hostname -f)</h1>" > /var/www/html/index.html',
+            'sudo echo "<h1>WithLoadBalancer Instance IP -----> $(hostname -f)</h1>" > /var/www/html/index.html',
         );
 
         const ubuntuMachineImage = ec2.MachineImage.genericLinux({

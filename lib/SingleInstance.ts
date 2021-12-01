@@ -2,7 +2,7 @@ import * as ec2 from '@aws-cdk/aws-ec2';
 import * as core from '@aws-cdk/core';
 
 // Crea una instancia, abre puertos 22, 80, 442, e instala apache
-export class Practica1 extends core.Construct {
+export class SingleInstance extends core.Construct {
     constructor(scope: core.Stack, id: string) {
         super(scope, id);
         const vpc = new ec2.Vpc(this, 'vpc-aws-course', {
@@ -48,7 +48,7 @@ export class Practica1 extends core.Construct {
             'sudo apt update',
             'sudo apt install -y apache2',
             'sudo service apache2 start',
-            'sudo echo "<h1>Instancia IP -----> $(hostname -f)</h1>" > /var/www/html/index.html',
+            'sudo echo "<h1>(SingleInstance) Instance IP -----> $(hostname -f)</h1>" > /var/www/html/index.html',
         )
 
         new ec2.Instance(this, 'ec2-instance-aws-course', {
