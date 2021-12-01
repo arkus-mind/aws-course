@@ -5,7 +5,8 @@ import * as autoscaling from '@aws-cdk/aws-autoscaling';
 import * as route53 from '@aws-cdk/aws-route53';
 import * as route53targets from '@aws-cdk/aws-route53-targets';
 
-export class EC2Instance extends core.Construct {
+// Levanta instancias con autoescalado y loadbalancer
+export class Practica2 extends core.Construct {
     constructor(scope: core.Stack, id: string) {
         super(scope, id);
 

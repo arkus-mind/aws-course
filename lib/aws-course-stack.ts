@@ -1,18 +1,22 @@
 import * as cdk from '@aws-cdk/core';
 // import * as sqs from '@aws-cdk/aws-sqs';
-import { EC2Instance } from "./instance";
+import { Practica2 } from "./Practica2";
+import { Practica1 } from "./Practica1";
 
 export class AwsCourseStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'AwsCourseQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
-
-    new EC2Instance(this, 'course');
+    switch (process.env.PRACTICA) {
+      case "2":
+        console.log('Empezando deploy practica 1');
+        new Practica2(this, 'Practica1');
+        break;
+      case "1":
+        console.log('Empezando deploy practica 2');
+        new Practica1(this, 'Practica2');
+        break;
+    }
   }
 }
