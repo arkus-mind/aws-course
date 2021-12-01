@@ -9,13 +9,13 @@ export class AwsCourseStack extends cdk.Stack {
 
     // The code that defines your stack goes here
     switch (process.env.PRACTICA) {
-      case "2":
-        console.log('Empezando deploy practica 1');
-        new Practica2(this, 'Practica1');
-        break;
       case "1":
+        console.log('Empezando deploy practica 1');
+        new Practica1(this, 'Practica1');
+        break;
+      case "2":
         console.log('Empezando deploy practica 2');
-        new Practica1(this, 'Practica2');
+        new Practica2(this, 'Practica2');
         break;
     }
   }
